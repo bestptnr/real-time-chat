@@ -1,0 +1,10 @@
+@font-face {
+  font-family: font;
+  src: url(/font/static/NotoSansThai-Regular.ttf);
+}
+*{
+  font-family: font
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
