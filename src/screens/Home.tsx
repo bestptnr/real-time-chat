@@ -7,6 +7,7 @@ import { db } from '../firebase';
 import { toast } from 'react-toastify';
 
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { Link } from 'react-router-dom';
 
 type Room = {
     id: string;
@@ -113,9 +114,10 @@ const Home = () => {
                         className="bg-white p-4 border rounded-md shadow-md h-32 mb-10 h-50 w-full sm:w-1/3 md:w-1/3 xl:w-1/6 m-5"
                     >
                         {room.roomname} <br /><br />
-                        <a href={"/chat/"+room.id}>
-                            <Button variant="outlined">Join Room</Button>
-                        </a>
+                        <Link to={"/chat/"+room.id}>
+                        <Button variant="outlined">Join Room</Button>
+                        </Link>
+                    
                     </div>
                 ))}
             </div>

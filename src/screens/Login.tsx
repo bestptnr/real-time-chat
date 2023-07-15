@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import { auth } from "../firebase"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Nav from '../components/Nav';
 import Cookies from 'universal-cookie';
 import { faker } from '@faker-js/faker';
@@ -105,7 +105,12 @@ const Login: React.FC = () => {
                             Login
                         </button>
                     </form>
-                    <p className="text-center mt-4">Yon don't have an account? <a href="/register" className="text-blue-500">Register</a></p>
+                    <p className="text-center mt-4">Yon don't have an account?
+                        <Link to="/register">
+                            <a className="text-blue-500">Register</a>
+                        </Link>
+
+                    </p>
                 </div>
             </div>
         </>
