@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import { auth } from "../firebase"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Nav from '../components/Nav';
 
 const Register: React.FC = () => {
@@ -112,7 +112,12 @@ const Register: React.FC = () => {
                             Register
                         </button>
                     </form>
-                    <p className="text-center mt-4">Already have an account? <a href="/login" className="text-blue-500">Login</a></p>
+                    <p className="text-center mt-4">Already have an account?
+                        <Link to="/login">
+                            <a className="text-blue-500">Login</a>
+                        </Link>
+
+                    </p>
                 </div>
             </div>
         </>
