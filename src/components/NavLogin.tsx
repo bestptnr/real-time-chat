@@ -1,13 +1,12 @@
 import React from "react";
 import {
     Navbar,
-    MobileNav,
     Typography,
     Button,
     IconButton,
     Collapse,
 } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import Cookies from "universal-cookie";
@@ -57,7 +56,7 @@ export default function NavLogin() {
                     <Typography
                         as="a"
                         href="/"
-                        className="mr-4 cursor-pointer py-1.5 font-medium font-bold"
+                        className="mr-4 cursor-pointer py-1.5 font-bold"
                     >
                         ComChat
                     </Typography>

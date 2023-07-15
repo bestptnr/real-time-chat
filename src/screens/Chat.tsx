@@ -1,25 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { Input, Button, Spinner } from '@material-tailwind/react';
-import { Timestamp, addDoc, collection, serverTimestamp, onSnapshot, query, where, orderBy } from 'firebase/firestore';
+import { Input, Button, } from '@material-tailwind/react';
+import {  addDoc, collection, serverTimestamp, onSnapshot, query, where, orderBy } from 'firebase/firestore';
 import { db, auth } from '../firebase';
 import { faker } from '@faker-js/faker';
 import { useParams } from 'react-router-dom';
-import firebase from 'firebase/compat/app';
 
-type Message = {
-  text: string;
-  createAt: firebase.firestore.Timestamp;
-  user: string;
-  roomid: string;
-};
+
 
 const Chat = () => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
   const { id } = useParams<{ id: string }>();
   const messageRef = collection(db, "messages");
-  const [loading, setLoading] = useState(false);
+
 
   const sendMessage = async () => {
     if (message) {
@@ -46,7 +40,7 @@ const Chat = () => {
         msg.push({ ...doc.data(), id: doc.id });
       });
       setMessages(msg);
-      setLoading(true);
+     
     });
 
 

@@ -5,9 +5,9 @@ import Register from './screens/Register';
 import Home from './screens/Home';
 import { ToastContainer } from 'react-toastify';
 import Login from './screens/Login';
-import ProtectedLogin,{ ProtectedRoute }  from './components/Protected';
+import ProtectedLogin  from './components/Protected';
 
-import Cookies from 'universal-cookie';
+
 import 'react-toastify/dist/ReactToastify.css';
 import Chat from './screens/Chat';
 

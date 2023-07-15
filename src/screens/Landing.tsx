@@ -1,5 +1,5 @@
 
-import React, { useState, useRef } from 'react';
+import { useRef } from 'react';
 import '../App.css';
 import Nav from '../components/Nav';
 import Lottie from 'lottie-react';

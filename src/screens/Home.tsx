@@ -5,7 +5,7 @@ import { getDocs, addDoc, collection, QueryDocumentSnapshot, DocumentData } from
 import { Input, Button } from "@material-tailwind/react";
 import { db } from '../firebase';
 import { toast } from 'react-toastify';
-import { useNavigate } from "react-router-dom";
+
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 type Room = {
@@ -15,7 +15,7 @@ type Room = {
 };
 
 const Home = () => {
-    const navigate = useNavigate();
+
     const [room, setRoom] = useState('');
     const [rooms, setRooms] = useState<Room[]>([]);
     const [uid, setUID] = useState('');
